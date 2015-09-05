@@ -10,12 +10,13 @@
         
         // Do something when the input is being loaded
         input.init = function() {
+            $(dom.find('#checkblock_' + data.generated_id)).prop('checked', data.value);
         }
         
         // Get the data from this input, it has to be a simple object.
         input.getData = function() {
             return {
-                value:$(document.getElementById('checkblock_' + data.generated_id)).is(':checked')
+                value:$(dom.find('#checkblock_' + data.generated_id)).is(':checked')
             }
         }
         
